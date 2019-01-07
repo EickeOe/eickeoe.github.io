@@ -1,0 +1,381 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DocumentFragment · Eick的杂记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="DOM的DocumentFragment对象相关笔记">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight-code/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../react/jian-dan-jie-shao.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"EickeOe","repo":"notes","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">DOM</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="documentfragment.html">
+            
+                <a href="documentfragment.html">
+            
+                    
+                    DocumentFragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">React</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../react/jian-dan-jie-shao.html">
+            
+                <a href="../react/jian-dan-jie-shao.html">
+            
+                    
+                    简单介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >DocumentFragment</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#documentfragment"><b>1. </b>DocumentFragment</a></li><ul><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;"><b>1.1. </b>&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;"><b>1.2. </b>&#x5982;&#x4F55;&#x4F7F;&#x7528;</a></li></ul></ul></div><a href="#documentfragment" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="documentfragment"><a name="documentfragment" class="anchor-navigation-ex-anchor" href="#documentfragment"><i class="fa fa-link" aria-hidden="true"></i></a>1. DocumentFragment</h1>
+<blockquote>
+<p>DocumentFragment&#x63A5;&#x53E3;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x505A;dom&#x7EA7;&#x522B;&#x7684;&#x6027;&#x80FD;&#x4F18;&#x5316;</p>
+</blockquote>
+<h2 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4ECB;&#x7ECD;</h2>
+<p>DocumentFragment &#x63A5;&#x53E3;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x7236;&#x7EA7;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5C0F;&#x6587;&#x6863;&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x88AB;&#x5F53;&#x505A;&#x4E00;&#x4E2A;&#x8F7B;&#x91CF;&#x7248;&#x7684; Document &#x4F7F;&#x7528;&#xFF0C;&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5DF2;&#x6392;&#x597D;&#x7248;&#x7684;&#x6216;&#x5C1A;&#x672A;&#x6253;&#x7406;&#x597D;&#x683C;&#x5F0F;&#x7684;XML&#x7247;&#x6BB5;&#x3002;&#x6700;&#x5927;&#x7684;&#x533A;&#x522B;&#x662F;&#x56E0;&#x4E3A;DocumentFragment&#x4E0D;&#x662F;&#x771F;&#x5B9E;DOM&#x6811;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5B83;&#x7684;&#x53D8;&#x5316;&#x4E0D;&#x4F1A;&#x5F15;&#x8D77;DOM&#x6811;&#x7684;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;(reflow) &#xFF0C;&#x4E14;&#x4E0D;&#x4F1A;&#x5BFC;&#x81F4;&#x6027;&#x80FD;&#x7B49;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;"><a name="&#x5982;&#x4F55;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5982;&#x4F55;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5982;&#x4F55;&#x4F7F;&#x7528;</h2>
+<p>&#x5E38;&#x89C1;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x662F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;DocumentFragment &#x5BF9;&#x8C61;&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x4E2D;&#x7EC4;&#x88C5;&#x4E00;&#x4E2A;DOM&#x5B50;&#x6811;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Node" target="_blank">Node</a>&#x5BF9;&#x8C61;(&#x4F8B;&#x5982;document.body)&#x7684;<code>appendChild</code>&#x6216;&#x8005;<code>insertBefore</code>&#x65B9;&#x6CD5;&#x5C06;&#x8BE5;&#x7247;&#x6BB5;&#x9644;&#x52A0;&#x6216;&#x63D2;&#x5165;&#x5230;DOM&#x4E2D;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x88AB;&#x6DFB;&#x52A0;(append)&#x6216;&#x8005;&#x88AB;&#x63D2;&#x5165;( inserted)&#x7684;&#x662F;DocumentFragment &#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x975E;DocumentFragment &#x5BF9;&#x8C61;&#x672C;&#x8EAB;&#xFF0C;DocumentFragment &#x5BF9;&#x8C61;&#x53D8;&#x6210;&#x7A7A;&#x767D;DocumentFragment &#x5BF9;&#x8C61;&#x3002;</p>
+<blockquote>
+<p>&#x8FD9;&#x4F7F;&#x5F97;DocumentFragment &#x5BF9;&#x8C61;&#x6210;&#x4E86;&#x6709;&#x7528;&#x7684;&#x5360;&#x4F4D;&#x7B26;&#xFF0C;&#x6682;&#x65F6;&#x5B58;&#x653E;&#x90A3;&#x4E9B;&#x4E00;&#x6B21;&#x63D2;&#x5165;document&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x6709;&#x5229;&#x4E8E;&#x5B9E;&#x73B0;document&#x7684;&#x526A;&#x5207;&#x3001;&#x590D;&#x5236;&#x3001;&#x7C98;&#x8D34;&#x64CD;&#x4F5C;&#x3002;</p>
+</blockquote>
+<p>&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x8282;&#x70B9;&#x4F1A;&#x88AB;&#x4E00;&#x6B21;&#x63D2;&#x5165;&#x5230;document&#x4E2D;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x4EC5;&#x53D1;&#x751F;&#x4E00;&#x4E2A;&#x91CD;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x5206;&#x522B;&#x88AB;&#x63D2;&#x5165;&#x5230;&#x6587;&#x6863;&#x4E2D;(&#x4F1A;&#x53D1;&#x751F;&#x591A;&#x6B21;&#x91CD;&#x6E32;&#x67D3;&#x7684;&#x64CD;&#x4F5C;)&#x3002;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> frag = <span class="hljs-built_in">document</span>.createDocumentFragment()
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+  <span class="hljs-keyword">const</span> op = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;P&apos;</span>)
+  <span class="hljs-keyword">const</span> oText = <span class="hljs-built_in">document</span>.createTextNode(i)
+  op.appendChild(oText)
+  frag.appendChild(op)
+}
+<span class="hljs-built_in">document</span>.body.appendChild(frag)
+</code></pre>
+<blockquote>
+<p>&#x5F53;DocumentFragment &#x5BF9;&#x8C61;&#x63D2;&#x5165;&#x5B8C;&#x4F1A;&#x81EA;&#x52A8;&#x9500;&#x6BC1;DocumentFragment &#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5BB9;</p>
+</blockquote>
+<h4 id="&#x79FB;&#x9664;dom&#x5230;documentfragment&#x5BF9;&#x8C61;&#x4E2D;"><a name="&#x79FB;&#x9664;dom&#x5230;documentfragment&#x5BF9;&#x8C61;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#&#x79FB;&#x9664;dom&#x5230;documentfragment&#x5BF9;&#x8C61;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x79FB;&#x9664;DOM&#x5230;DocumentFragment&#x5BF9;&#x8C61;&#x4E2D;</h4>
+<p>&#x5982;&#x679C;&#x5C06;document&#x4E2D;&#x7684;&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;DocumentFragment&#x5BF9;&#x8C61;&#x4E2D;&#xFF0C;&#x5C31;&#x4F1A;&#x4ECE;document&#x4E2D;&#x79FB;&#x9664;&#x8BE5;&#x8282;&#x70B9;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x4ECE;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x770B;&#x5230;&#x8BE5;&#x8282;&#x70B9;&#xFF0C;&#x6DFB;&#x52A0;&#x5230;DocumentFragment&#x5BF9;&#x8C61;&#x7684;&#x65B0;&#x8282;&#x70B9;&#x4E5F;&#x4E0D;&#x5C5E;&#x4E8E;DOM&#x6811;</p>
+<pre><code class="lang-markup">&#x200B;<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript">
+       <span class="hljs-keyword">var</span> frag=<span class="hljs-built_in">document</span>.createDocumentFragment();
+       <span class="hljs-keyword">var</span> ul = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&apos;ul&apos;</span>)[<span class="hljs-number">0</span>]
+       <span class="hljs-built_in">console</span>.log(ul)
+       frag.appendChild(ul)
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span>
+</code></pre>
+<p>&#x628A;DOM&#x6811;&#x4E2D;&#x7684;ul&#x8282;&#x70B9;&#x6DFB;&#x52A0;&#x5230;&#x6587;&#x6863;&#x788E;&#x7247;&#x4E2D;&#xFF0C;&#x8FD9;&#x65F6;dom&#x6811;&#x4E2D;&#x7684;ul&#x8282;&#x70B9;&#x4E5F;&#x6D88;&#x5931;&#x4E86;&#xFF0C;&#x5B58;&#x653E;&#x5728;DocumentFragment&#x5BF9;&#x8C61;&#x4E2D;&#x4E86;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x4E0D;&#x4F1A;&#x91CD;&#x6E32;&#x67D3;dom&#x6811;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../react/jian-dan-jie-shao.html" class="navigation navigation-next " aria-label="Next page: 简单介绍">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"DOM的DocumentFragment对象相关笔记","title":"DocumentFragment","level":"2.1","depth":1,"next":{"title":"简单介绍","level":"3.1","depth":1,"path":"react/jian-dan-jie-shao.md","ref":"react/jian-dan-jie-shao.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","splitter","mermaid","disqus","-search","anchor-navigation-ex","search-pro","advanced-emoji","hints","highlight-code","toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"github":{"url":"https://github.com/EickeOe"},"highlight-code":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"mermaid":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"EickeOe","repo":"notes","type":"star","size":"small","count":true}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Eick的杂记","language":"zh-hans","gitbook":"*"},"file":{"path":"dom/documentfragment.md","mtime":"2019-01-07T03:04:40.166Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T08:39:24.471Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

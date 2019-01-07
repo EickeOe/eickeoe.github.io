@@ -1,0 +1,424 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>简单介绍 · Eick的杂记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="React简单介绍">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight-code/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../dom/documentfragment.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"EickeOe","repo":"notes","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">DOM</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../dom/documentfragment.html">
+            
+                <a href="../dom/documentfragment.html">
+            
+                    
+                    DocumentFragment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">React</li>
+        
+        
+    
+        <li class="chapter active" data-level="3.1" data-path="jian-dan-jie-shao.html">
+            
+                <a href="jian-dan-jie-shao.html">
+            
+                    
+                    简单介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >简单介绍</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x4ECB;&#x7ECD;"><b>1. </b>&#x7B80;&#x5355;&#x4ECB;&#x7ECD;</a></li></ul></div><a href="#&#x7B80;&#x5355;&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B80;&#x5355;&#x4ECB;&#x7ECD;"><a name="&#x7B80;&#x5355;&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x7B80;&#x5355;&#x4ECB;&#x7ECD;</h1>
+<blockquote>
+<p>&#x672C;&#x6587;&#x6863;&#x793A;&#x4F8B;&#x4EE3;&#x7801;&#x4F7F;&#x7528;&#x8BED;&#x8A00;&#x4E3A;typescript</p>
+</blockquote>
+<h3 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h3>
+<p>react&#x662F;Facebook&#x7684;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;JavaScript&#x7C7B;&#x5E93;&#x3002;&#x6838;&#x5FC3;&#x6280;&#x672F;&#x548C;&#x6982;&#x5FF5;&#x4E3A;jsx&#xFF0C;&#x7EC4;&#x4EF6;&#xFF0C;v-dom&#xFF0C;data flow&#x3002;</p>
+<h4 id="jsx"><a name="jsx" class="anchor-navigation-ex-anchor" href="#jsx"><i class="fa fa-link" aria-hidden="true"></i></a>jsx</h4>
+<p>react&#x7684;&#x6A21;&#x677F;&#x4EE3;&#x7801;&#xFF0C;&#x76F4;&#x63A5;&#x5D4C;&#x5165;js&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x6587;&#x4EF6;&#x540E;&#x7F00;&#x4E3A;<code>.jsx</code>&#x6216;&#x8005;<code>.tsx</code></p>
+<h4 id="&#x7EC4;&#x4EF6;"><a name="&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;</h4>
+<p><code>state</code>&#x548C;<code>props</code>&#x662F;react&#x7EC4;&#x4EF6;&#x7684;&#x4E24;&#x4E2A;&#x6838;&#x5FC3;&#x6982;&#x5FF5;</p>
+<p><strong>props</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
+<span class="hljs-keyword">import</span> React, { Component } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+
+<span class="hljs-keyword">const</span> Helloworld = <span class="hljs-function">(<span class="hljs-params">props</span>) =&gt;</span> {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{props.str}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+}
+
+<span class="hljs-comment">// &#x52A0;&#x8F7D;&#x7EC4;&#x4EF6;&#x5230; DOM </span>
+render(<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Helloworld</span> <span class="hljs-attr">str</span>=<span class="hljs-string">&apos;Hello world!&apos;</span> /&gt;</span>, document);
+</span></code></pre>
+<p><code>props</code>&#x662F;&#x5728;&#x8C03;&#x7528;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x4F20;&#x5165;&#x4E0D;&#x540C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x65E0;&#x6CD5;&#x6539;&#x53D8;&#x81EA;&#x8EAB;&#x7684;<code>props</code>&#xFF0C;&#x53EF;&#x4EE5;&#x628A;<code>props</code>&#x770B;&#x4F5C;&#x7EC4;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x5C5E;&#x6027;&#x3002;</p>
+<p><strong>state</strong></p>
+<p><code>state</code>&#x662F;&#x7EC4;&#x4EF6;&#x7684;&#x5F53;&#x524D;&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x7EC4;&#x4EF6;&#x770B;&#x4F5C;&#x4E00;&#x4E2A;<code>&#x72B6;&#x6001;&#x673A;</code>&#xFF0C;&#x6839;&#x636E;&#x72B6;&#x6001;&#x5448;&#x73B0;&#x4E0D;&#x540C;&#x7684;UI&#x5C55;&#x793A;&#x3002;&#x4E00;&#x65E6;&#x72B6;&#x6001;&#x53D8;&#x66F4;&#xFF0C;&#x7EC4;&#x4EF6;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;<code>render</code>&#x91CD;&#x65B0;&#x6E32;&#x67D3;UI&#xFF0C;&#x8FD9;&#x4E2A;&#x66F4;&#x6539;&#x7684;&#x52A8;&#x4F5C;&#x4F1A;&#x901A;&#x8FC7;<code>this.setState</code>&#x65B9;&#x6CD5;&#x6765;&#x89E6;&#x53D1;&#x3002;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x53D8;&#x66F4;state&#x662F;&#x65E0;&#x6CD5;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7684;</p>
+<h4 id="v-dom"><a name="v-dom" class="anchor-navigation-ex-anchor" href="#v-dom"><i class="fa fa-link" aria-hidden="true"></i></a>v-dom</h4>
+<p>&#x5168;&#x79F0;Virtual DOM&#xFF0C;react&#x5B9E;&#x73B0;&#x7684;&#x865A;&#x62DF;dom&#x3002;&#x7EC4;&#x4EF6;dom&#x7ED3;&#x6784;&#x6620;&#x5C04;&#x5728;v-dom&#x4E0A;&#xFF0C;react&#x5728;v-dom&#x4E0A;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;diff&#x7B97;&#x6CD5;&#xFF0C;&#x5F53;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;diff&#x7B97;&#x6CD5;&#x53BB;&#x5BFB;&#x627E;&#x9700;&#x8981;&#x53D8;&#x66F4;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x518D;&#x628A;&#x8FD9;&#x4E2A;&#x6539;&#x52A8;&#x66F4;&#x65B0;&#x5230;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x771F;&#x5B9E;dom&#x4E0A;&#x3002;v-dom&#x662F;&#x4E00;&#x4E2A;&#x7EAF;&#x7CB9;&#x7684;js&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6027;&#x80FD;&#x56DE;&#x907F;&#x539F;&#x751F;dom&#x5FEB;&#x5F88;&#x591A;</p>
+<h4 id="data-flow"><a name="data-flow" class="anchor-navigation-ex-anchor" href="#data-flow"><i class="fa fa-link" aria-hidden="true"></i></a>data flow</h4>
+<p>&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;&#x662F;react&#x63A8;&#x5D07;&#x7684;&#x4E00;&#x79CD;&#x5E94;&#x7528;&#x67B6;&#x6784;&#x65B9;&#x5F0F;&#xFF0C;&#x6307;&#x53EA;&#x80FD;&#x4ECE;&#x4E00;&#x4E2A;&#x65B9;&#x5411;&#x6765;&#x4FEE;&#x6539;&#x72B6;&#x6001;&#xFF0C;props&#x7684;&#x53D8;&#x66F4;&#x65B9;&#x5F0F;&#x5F88;&#x597D;&#x7684;&#x89E3;&#x91CA;&#x4E86;&#x5355;&#x5411;&#x6570;&#x636E;&#x6D41;</p>
+<h3 id="jsx&#x8BED;&#x6CD5;"><a name="jsx&#x8BED;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#jsx&#x8BED;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>JSX&#x8BED;&#x6CD5;</h3>
+<p>jsx&#x5168;&#x79F0;&#x4E3A;JavaScript XML&#xFF0C;&#x662F;ECMAScript&#x7684;&#x7C7B;&#x4F3C;XML&#x7684;&#x8BED;&#x6CD5;&#x6269;&#x5C55;&#x3002;jsx&#x4E3A;react&#x5F00;&#x53D1;&#x7684;&#x4E00;&#x5957;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;&#x4E5F;&#x662F;react&#x7684;&#x57FA;&#x7840;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
+<span class="hljs-keyword">const</span> helloworld = <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>; <span class="hljs-comment">// &#x58F0;&#x660E;&#x5E38;&#x91CF;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF0C;&#x7EAF;&#x7EC4;&#x4EF6;</span>
+<span class="hljs-keyword">const</span> helloworldFunc = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> { <span class="hljs-comment">// &#x58F0;&#x660E;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;</span>
+    <span class="hljs-keyword">const</span> str = <span class="hljs-string">&apos;Hello world!&apos;</span>;
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{str}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+}
+interface Props{
+    <span class="hljs-attr">props1</span>:string
+}
+interface State{
+    <span class="hljs-attr">state1</span>:string
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>,<span class="hljs-title">State</span>&gt;</span>{<span class="hljs-comment">// class&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;</span>
+    render(){
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    }
+}
+</code></pre>
+<h3 id="&#x7EC4;&#x4EF6;_1"><a name="&#x7EC4;&#x4EF6;_1" class="anchor-navigation-ex-anchor" href="#&#x7EC4;&#x4EF6;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EC4;&#x4EF6;</h3>
+<p>react&#x5728;es6&#x4E2D;&#x7684;&#x7EC4;&#x4EF6;&#x5728;&#x5199;&#x6CD5;&#x4E0A;&#x5206;&#x4E3A;class&#x7EC4;&#x4EF6;&#x548C;function&#x7EC4;&#x4EF6;&#xFF0C;&#x5728;&#x72B6;&#x6001;&#x4E0A;&#x5206;&#x4E3A;&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x548C;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h4 id="&#x5199;&#x6CD5;&#x533A;&#x5206;"><a name="&#x5199;&#x6CD5;&#x533A;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x6CD5;&#x533A;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5199;&#x6CD5;&#x533A;&#x5206;</h4>
+<p><strong>class&#x7EC4;&#x4EF6;</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
+interface Props{
+    <span class="hljs-attr">props1</span>:string
+}
+interface State{
+    <span class="hljs-attr">state1</span>:string
+}
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DemoComponent</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span>&lt;<span class="hljs-title">Props</span>,<span class="hljs-title">State</span>&gt;</span>{
+    render(){
+        <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Hello world!<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+    }
+}
+</code></pre>
+<p>class&#x7EC4;&#x4EF6;&#x5305;&#x542B;state&#x548C;&#x5B8C;&#x6574;&#x7684;react&#x7EC4;&#x4EF6;&#x751F;&#x547D;&#x5468;&#x671F;,&#x5176;&#x4E2D;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#x4E3A;<code>render()</code></p>
+<p><strong>function&#x7EC4;&#x4EF6;</strong></p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// &#x793A;&#x4F8B;&#x4EE3;&#x7801;</span>
+interface Props{
+    <span class="hljs-attr">props1</span>:string
+}
+<span class="hljs-keyword">const</span> helloworldFunc = <span class="hljs-function">(<span class="hljs-params">props:Props</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> str = <span class="hljs-string">&apos;Hello world!&apos;</span>;
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{str}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+}
+</code></pre>
+<p>function&#x7EC4;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#x5373;&#x4E3A;&#x6E32;&#x67D3;&#x7EC4;&#x4EF6;&#xFF0C;&#x5728;react16.7&#x7248;&#x672C;&#x4E4B;&#x524D;&#xFF0C;function&#x7EC4;&#x4EF6;&#x53EA;&#x80FD;&#x4F5C;&#x4E3A;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;</p>
+<blockquote>
+<p>&#x5728;react16.7&#x7248;&#x672C;&#x4E2D;&#xFF0C;react&#x5F15;&#x5165;&#x4E86;react hooks&#xFF0C;function&#x7EC4;&#x4EF6;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x6765;&#x4F7F;&#x7528;&#x4E86;</p>
+</blockquote>
+<pre><code class="lang-jsx"><span class="hljs-comment">// react hooks&#x4EE3;&#x7801;&#x793A;&#x4F8B;</span>
+<span class="hljs-keyword">import</span> React,{useState} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+interface Props{
+    <span class="hljs-attr">props1</span>:string
+}
+<span class="hljs-keyword">const</span> hooksDemo = <span class="hljs-function">(<span class="hljs-params">props:Props</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> [str,setStr] = useState(<span class="hljs-string">&apos;hello world!&apos;</span>);
+    <span class="hljs-comment">// str&#x5373;&#x4E3A;state.str&#xFF0C;setStr&#x5373;&#x4E3A;setState({str}),&#x2018;hello world!&#x2019;&#x4E3A;str&#x7684;&#x521D;&#x59CB;&#x503C;</span>
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>{str}<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>;
+}
+</code></pre>
+<h4 id="&#x72B6;&#x6001;&#x533A;&#x5206;"><a name="&#x72B6;&#x6001;&#x533A;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x72B6;&#x6001;&#x533A;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x72B6;&#x6001;&#x533A;&#x5206;</h4>
+<p><strong>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;</strong></p>
+<p>&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;(Stateless Component)&#x662F;&#x6700;&#x57FA;&#x7840;&#x7684;&#x7EC4;&#x4EF6;&#x5F62;&#x5F0F;&#xFF0C;&#x7531;&#x4E8E;&#x6CA1;&#x6709;&#x72B6;&#x6001;&#x7684;&#x5F71;&#x54CD;&#x6240;&#x4EE5;&#x5C31;&#x662F;&#x7EAF;&#x9759;&#x6001;&#x5C55;&#x793A;&#x7684;&#x4F5C;&#x7528;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5404;&#x79CD;UI&#x5E93;&#x91CC;&#x4E5F;&#x662F;&#x6700;&#x5F00;&#x59CB;&#x4F1A;&#x5F00;&#x53D1;&#x7684;&#x7EC4;&#x4EF6;&#x7C7B;&#x522B;&#x3002;&#x5982;&#x6309;&#x94AE;&#x3001;&#x6807;&#x7B7E;&#x3001;&#x8F93;&#x5165;&#x6846;&#x7B49;&#x3002;&#x5B83;&#x7684;&#x57FA;&#x672C;&#x7EC4;&#x6210;&#x7ED3;&#x6784;&#x5C31;&#x662F;&#x5C5E;&#x6027;&#xFF08;<code>props</code>&#xFF09;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x6E32;&#x67D3;&#x51FD;&#x6570;&#xFF08;<code>render</code>&#xFF09;&#x3002;&#x7531;&#x4E8E;&#x4E0D;&#x6D89;&#x53CA;&#x5230;&#x72B6;&#x6001;&#x7684;&#x66F4;&#x65B0;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x79CD;&#x7EC4;&#x4EF6;&#x7684;&#x590D;&#x7528;&#x6027;&#x4E5F;&#x6700;&#x5F3A;</p>
+<p><strong>&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;</strong></p>
+<p>&#x5728;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x7EC4;&#x4EF6;&#x5185;&#x90E8;&#x5305;&#x542B;&#x72B6;&#x6001;&#xFF08;<code>state</code>&#xFF09;&#x4E14;&#x72B6;&#x6001;&#x968F;&#x7740;&#x4E8B;&#x4EF6;&#x6216;&#x8005;&#x5916;&#x90E8;&#x7684;&#x6D88;&#x606F;&#x800C;&#x53D1;&#x751F;&#x6539;&#x53D8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FD9;&#x5C31;&#x6784;&#x6210;&#x4E86;&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF08;Stateful Component&#xFF09;&#x3002;&#x6709;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#x901A;&#x5E38;&#x4F1A;&#x5E26;&#x6709;&#x751F;&#x547D;&#x5468;&#x671F;(lifecycle)&#xFF0C;&#x7528;&#x4EE5;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x523B;&#x89E6;&#x53D1;&#x72B6;&#x6001;&#x7684;&#x66F4;&#x65B0;&#x3002;&#x8FD9;&#x79CD;&#x7EC4;&#x4EF6;&#x4E5F;&#x662F;&#x901A;&#x5E38;&#x5728;&#x5199;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x4E2D;&#x6700;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x5230;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x7EC4;&#x4EF6;&#x7684;&#x72B6;&#x6001;&#x6570;&#x91CF;&#x4EE5;&#x53CA;&#x751F;&#x547D;&#x5468;&#x671F;&#x673A;&#x5236;&#x4E5F;&#x4E0D;&#x5C3D;&#x76F8;&#x540C;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../dom/documentfragment.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: DocumentFragment">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"React简单介绍","title":"简单介绍","level":"3.1","depth":1,"previous":{"title":"DocumentFragment","level":"2.1","depth":1,"path":"dom/documentfragment.md","ref":"dom/documentfragment.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","github-buttons","splitter","mermaid","disqus","-search","anchor-navigation-ex","search-pro","advanced-emoji","hints","highlight-code","toggle-chapters"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"github":{"url":"https://github.com/EickeOe"},"highlight-code":{},"splitter":{},"search-pro":{"cutWordLib":"nodejieba","defineWord":["搜索"]},"mermaid":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"github-buttons":{"buttons":[{"user":"EickeOe","repo":"notes","type":"star","size":"small","count":true}]},"advanced-emoji":{"embedEmojis":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Eick的杂记","language":"zh-hans","gitbook":"*"},"file":{"path":"react/jian-dan-jie-shao.md","mtime":"2019-01-07T03:04:40.166Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T08:39:24.471Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
